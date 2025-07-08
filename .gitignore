@@ -1,6 +1,14 @@
-node_modules
-.next
-.env
-dist
+# Avoid system files
 .DS_Store
+Thumbs.db
+AppData/
+.vscode/
 *.log
+*.tmp
+node_modules/
+*.bak
+
+# Common build folders
+.next
+dist
+.env
