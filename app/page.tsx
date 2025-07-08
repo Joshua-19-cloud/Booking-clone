@@ -8,6 +8,9 @@ import { useState } from "react"
 import NavButton from "@/components/NavButton"
 import Preferences from "@/components/Preferences"
 import HeroSection from "@/components/ui/HeroSection"
+import { PromoBannerCard } from "@/components/ui/PromoBannerCard"
+import { HolidayPromoCard } from "@/components/ui/HolidayPromoCard"
+
 
 export default function HomePage() {
   const [date, setDate] = useState<Date | undefined>(new Date())
@@ -63,9 +66,65 @@ export default function HomePage() {
           <p className="text-l text-gray-600 px-11 py-1">Promotions, deals and special offers for you</p>
         </div>
 
-        {/* Removed search bar here */}
         
+        {/* Removed search bar here */}
+        <PromoBannerCard
+        
+  title="Quick escape, quality time"
+  subtitle="Save up to 20% with a Getaway Deal"
+  buttonText="Save on stays"
+  image="/travel.png"
+
+/>
+
+<HolidayPromoCard
+  tag="Holiday rentals"
+  title="Live the dream in a holiday home"
+  subtitle="Choose from houses, villas, chalets and more"
+  buttonText="Book yours"
+  backgroundImage="/holiday.png"
+/>
+
+      
+<div className="w-full items-center justify-between px-11 mt-14 ">
+  <h4 className="text-2xl font-bold text-black">Popular destinations with travellers from India</h4>
+</div>
+
+{/* 👇 Add your custom image section here */}
+<div className="flex gap-4 px-11 mt-10">
+  <div></div>
+  <img
+    src="/taj.PNG"
+    alt="Promotional Image"
+    className="w-[595px] h-[250px] rounded-lg shadow-md object-cover"
+  />
+  <img
+    src="/vidhana.png"
+    alt="Second Promo"
+    className="w-[595px] h-[250px] rounded-lg shadow-md object-cover"
+  />
+</div>
+
+   <div className="flex gap-4 px-11 mt-10">
+     <img
+        src="/mumbai.png" 
+        alt="third promo"
+        className="w-[380px] h-[220px] rounded-lg shadow-md object-cover"
+  />
+      <img
+        src="/chennai.png" 
+        alt="third promo"
+        className="w-[380px] h-[220px] rounded-lg shadow-md object-cover"
+  />
+      <img
+        src="/varanasi.png" 
+        alt="third promo"
+        className="w-[380px] h-[220px] rounded-lg shadow-md object-cover"
+  />
+        
+   </div>
         <HeroSection />
+      
       </div>
     </div>
   )
