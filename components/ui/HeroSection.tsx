@@ -2,7 +2,7 @@
 
 export default function SearchBar() {
   return (
-    <div className="absolute top-[217px] left-1/2 transform -translate-x-1/2 bg-white p-0 rounded-md shadow-md w-full max-w-6xl z-50 border-4 border-yellow-400">
+    <div className="absolute top-[340px] left-1/2 transform -translate-x-1/2 bg-white p-0 rounded-md shadow-md w-full max-w-6xl z-50 border-4 border-yellow-400">
       <div className="flex flex-row divide-x-4 divide-yellow-400">
         {/* First Input - Where are you going? */}
         <div className="relative flex-1 border-r-4 border-yellow-400">

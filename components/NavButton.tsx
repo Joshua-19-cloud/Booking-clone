@@ -85,7 +85,7 @@ const navItems = [
 ];
 export default function NavButtons() {
   return (
-    <section className="w-full px-0 sm:px-0 py-0">
+    <section className="w-full px-0 sm:px-0 -ml-8 py-0">
       <div className="max-w-7xl mx-auto overflow-x-auto">
         <nav>
           <ul className="inline-flex gap-2 px-4 sm:px-0 whitespace-nowrap">
@@ -99,7 +99,7 @@ export default function NavButtons() {
                       : 'hover:bg-blue-900'
                   }`}
               >
-                <Link href={item.href} className="flex items-center gap-2">
+                <Link href={item.href} className="flex items-center gap-2 text-white">
                   <span>{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>
