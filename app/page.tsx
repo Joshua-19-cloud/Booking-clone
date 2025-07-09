@@ -104,7 +104,7 @@
         </header>
 
         {/* Hero Section */}
-        <div className="bg-[#003580] text-white h-[38vh] px-6 md:px-16 pt-8 relative">
+        <div className="bg-[#003580] text-white h-[37vh] px-6 md:px-16 pt-8 relative">
           <div className="px-[60px] py-12">
             <h2 className="font-booking text-5xl font-extrabold">Find your next stay</h2>
             <p className="text-xl md:text-2xl mt-3 font-sans">Search low prices on hotels, homes and much more...</p>
@@ -226,10 +226,11 @@
             </Carousel>
           </div>
   </div>
-       <Footer /> 
+       
           
 
           <HeroSection />
+          <Footer /> 
           
           
         </div>
