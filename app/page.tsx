@@ -9,8 +9,10 @@ import { PromoBannerCard } from "@/components/ui/PromoBannerCard"
 import { HolidayPromoCard } from "@/components/ui/HolidayPromoCard"
 import Footer from "@/components/ui/FooterTemp"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { FeatureHighlights } from "@/components/ui/FeatureHighlights"
+import GeniusSignIn from "@/components/ui/GeniusSignIn"
 import Footer1 from "@/components/Footer1"
-
+ 
 export default function HomePage() {
   const [date, setDate] = useState<Date | undefined>(new Date())
   const [guests, setGuests] = useState(2)
@@ -228,9 +230,99 @@ export default function HomePage() {
 
       <HeroSection />
       {/* Discover Homes Promo Section */}
+              <HeroSection />
 
-              <Footer1 />
+      {/* Homes guests love Carousel */}
+      <div className="px-26 mt-435 ">
+        <h2 className="text-2xl font-bold text-black mb-0">Homes guests love</h2>
+        <Carousel className="w-full">
+          <CarouselContent>
+            {[
+              {
+                img: "/Aparthotel Stare Miasto.png",
+                title: "Aparthotel Stare Miasto",
+                location: "Old Town, Poland, Kraków",
+                rating: "8.8",
+                reviewText: "Fabulous",
+                reviewCount: "3,297",
+                price: "₹13,257",
+              },
+              {
+                img: "/7Seasons Apartments Budapest.png",
+                title: "7Seasons Apartments Budapest",
+                location: "06. Terézváros, Hungary, Budapest",
+                rating: "8.7",
+                reviewText: "Fabulous",
+                reviewCount: "11,119",
+                price: "₹11,885",
+              },
+              {
+                img: "/Downtown Synagogue.png",
+                title: "Downtown Synagogue",
+                location: "07. Erzsébetváros, Hungary, Budapest",
+                rating: "8.4",
+                reviewText: "Very good",
+                reviewCount: "134",
+                price: "₹11,042",
+              },
+              {
+                img: "/Numa Florence Vita.png",
+                title: "Numa Florence Vita",
+                location: "Santa Maria Novella, Italy, Florence",
+                rating: "8.9",
+                reviewText: "Fabulous",
+                reviewCount: "1,314",
+                price: "₹23,489",
+              },
+              {
+                img: "/Cheval Three Quays at The Tower of London.png",
+                title: "Cheval Three Quays at The Tower of London",
+                location: "City of London, United Kingdom, London",
+                rating: "9.4",
+                reviewText: "Superb",
+                reviewCount: "757",
+                price: "₹49,850",
+              },
+            ].map((item, i) => (
+              <CarouselItem key={i} className="basis-[22%] px-2 py-4">
+                <div className="min-w-[250px] max-w-[280px] bg-white rounded-lg shadow hover:shadow-md transition p-3">
+                  <div className="relative h-[220px] w-full rounded-lg overflow-hidden">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                    <button className="absolute top-2 right-2 bg-white rounded-full p-1 shadow">
+                      <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="mt-3">
+                    <h3 className="font-semibold text-sm text-gray-900 line-clamp-2">{item.title}</h3>
+                    <p className="text-xs text-gray-500">{item.location}</p>
+                    <div className="flex items-center gap-1 text-xs mt-2">
+                      <span className="bg-blue-700 text-white px-1.5 py-0.5 rounded text-xs font-bold">{item.rating}</span>
+                      <span className="text-gray-700 font-medium">{item.reviewText}</span>
+                      <span className="text-gray-500">({item.reviewCount} reviews)</span>
+                    </div>
+                    <p className="text-sm text-gray-700 mt-2">
+                      Starting from <span className="font-bold">{item.price}</span>
+                    </p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+            <FeatureHighlights />
+
+           <div className="px-26 mt-10">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Travel more, spend less</h3>
+         <GeniusSignIn />
+      <Footer1 />
+      
       <Footer />
+      </div>
     </div>
   )
 }

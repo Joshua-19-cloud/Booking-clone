@@ -14,7 +14,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="w-full max-w-[1150px] mx-auto mt-440 relative overflow-hidden border rounded-lg bg-white pl-20">
+    <div className="w-full max-w-[1150px] mx-auto mt-4 relative overflow-hidden border rounded-lg bg-white pl-20">
       {/* Golden Circle (left decoration) */}
       <div className="absolute left-[-35px] top-1/2 transform -translate-y-1/2 bg-[#ffb700] h-[80px] w-[80px] rounded-full z-0 md:z-10"></div>
 
