@@ -107,7 +107,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <div className="bg-[#003580] text-white h-[37vh] px-6 md:px-16 pt-8 relative">
+      <div className="bg-[#003580] text-white h-auto sm:h-[37vh] px-4 sm:px-6 md:px-16 pt-8 relative">
         <div className="px-[60px] py-12">
           <h2 className="font-booking text-5xl font-extrabold">Find your next stay</h2>
           <p className="text-xl md:text-2xl mt-3 font-sans">Search low prices on hotels, homes and much more...</p>
@@ -147,7 +147,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative w-full sm:w-[595px] h-[250px] rounded-lg shadow-md overflow-hidden">
+          <div className="relative w-full sm:w-[48%] h-[250px] rounded-lg shadow-md overflow-hidden">
             <img src="/vidhana.png" alt="Vidhana Soudha" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <h2 className="absolute top-4 left-4 text-white text-2xl font-bold">Bengaluru</h2>
@@ -171,7 +171,7 @@ export default function HomePage() {
           <Carousel className="w-full">
             <CarouselContent>
               {carouselItems.map((item, index) => (
-                <CarouselItem key={index} className="basis-[18%] px-2">
+                <CarouselItem key={index} className="basis-full sm:basis-[48%] md:basis-[18%] px-2">
                   <div className="flex flex-col items-center">
                     <img
                       src={item.src}
@@ -197,7 +197,7 @@ export default function HomePage() {
           <Carousel className="w-full">
             <CarouselContent>
               {hotelCarouselItems.map((item, index) => (
-                <CarouselItem key={index} className="basis-[23%] px-2 py-4">
+                <CarouselItem key={index} className="basis-full sm:basis-[48%] md:basis-[23%] px-2 py-4">
                   <div className="flex flex-col w-full">
                     <img
                       src={item.image}
