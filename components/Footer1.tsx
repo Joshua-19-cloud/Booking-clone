@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Footer() {
   const words = ["vacation homes", "cottages", "cabins", "villas"];
@@ -14,13 +14,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="w-full max-w-[1150px] mx-auto mt-10 relative overflow-hidden border rounded-lg bg-white">
+    <div className="w-full max-w-[1150px] mx-auto mt-440 relative overflow-hidden border rounded-lg bg-white pl-20">
       {/* Golden Circle (left decoration) */}
-     <div className="absolute left-[-35px] top-1/2 transform -translate-y-1/2 bg-[#ffb700] h-[80px] w-[80px] rounded-full z-0 md:z-10"></div>
+      <div className="absolute left-[-35px] top-1/2 transform -translate-y-1/2 bg-[#ffb700] h-[80px] w-[80px] rounded-full z-0 md:z-10"></div>
 
-      {/* Blue Right Circle Background */}
-      <div className="w-full flex justify-end">
-        <div className="relative bg-blue-600 w-[600px] h-[200px] rounded-[100px] flex flex-col justify-center items-center text-white text-center px-6 -mr-[200px] my-10 ">
+      {/* Blue Circle Background Section (Shifted Left) */}
+      <div className="w-full flex justify-start">
+        <div className="relative bg-blue-600 w-[600px] h-[200px] rounded-[100px] flex flex-col justify-center items-center text-white text-center px-6 my-10">
           <h1 className="text-2xl sm:text-3xl font-bold mb-2">
             <span className="flex items-center justify-center gap-2">
               Find
@@ -37,9 +37,14 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Right Image (Desktop only) */}
+      {/* Floating Right Image */}
       <div className="hidden md:flex absolute right-0 bottom-0">
-        <Image src="Footer.png" alt="illustration" className="w-[500px] h-auto" />
+        <Image
+          src="/Footer1.png"
+          alt="illustration"
+          width={400}
+          height={300}
+        />
       </div>
     </div>
   );
