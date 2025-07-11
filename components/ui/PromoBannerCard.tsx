@@ -1,4 +1,3 @@
-// components/PromoBannerCard.tsx
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -16,8 +15,8 @@ export function PromoBannerCard({
   image,
 }: PromoBannerCardProps) {
   return (
-    <div className="px-4 sm:pl-[43px] w-full">
-      <div className="flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6 w-full max-w-[540px] border border-gray-200 shadow-lg rounded-xl bg-white mx-auto">
+    <div className="ml-[-10px] sm:ml-[-300px] px-4 w-full">
+      <div className="flex flex-col sm:flex-row justify-between items-center p-4 sm:p-4 w-full max-w-[540px] border border-gray-200 shadow-lg rounded-xl bg-white mx-auto">
         
         {/* Text Content */}
         <div className="text-center sm:text-left flex-1">
