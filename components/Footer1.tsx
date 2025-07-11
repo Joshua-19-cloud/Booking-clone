@@ -14,15 +14,15 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="w-full max-w-[1150px] mx-auto mt-4 relative overflow-hidden border rounded-lg bg-white sm:pl-20 pl-4">
-      {/* Golden Circle (left decoration) */}
-      <div className="absolute left-[-20px] sm:left-[-35px] top-1/2 transform -translate-y-1/2 bg-[#ffb700] h-[50px] w-[50px] sm:h-[80px] sm:w-[80px] rounded-full z-0 md:z-10"></div>
+    <div className="w-full max-w-[1150px] mx-auto mt-4 relative overflow-hidden border rounded-lg bg-white px-4 sm:px-20">
+      {/* Left Golden Circle */}
+      <div className="absolute left-[-20px] sm:left-[-35px] top-1/2 transform -translate-y-1/2 bg-[#ffb700] h-[50px] w-[50px] sm:h-[80px] sm:w-[80px] rounded-full z-0"></div>
 
-      {/* Blue Circle Background Section */}
+      {/* Blue Bubble Section */}
       <div className="w-full flex justify-center sm:justify-start">
-        <div className="relative bg-blue-600 w-full sm:w-[600px] h-[180px] sm:h-[200px] rounded-[80px] sm:rounded-[100px] flex flex-col justify-center items-center text-white text-center px-6 py-6 my-6 sm:my-10">
-          <h1 className="text-xl sm:text-3xl font-bold mb-2 leading-snug">
-            <span className="flex items-center justify-center gap-2 flex-wrap">
+        <div className="relative bg-blue-600 w-full sm:w-[600px] h-[160px] sm:h-[200px] rounded-[70px] sm:rounded-[100px] flex flex-col justify-center items-center text-white text-center px-4 sm:px-6 py-6 my-6 sm:my-10">
+          <h1 className="text-lg sm:text-3xl font-bold mb-2 leading-snug flex flex-col sm:flex-row gap-1 sm:gap-2 flex-wrap justify-center items-center">
+            <span className="flex gap-1">
               Find
               <span className="underline decoration-yellow-400">
                 {words[currentWordIndex]}
@@ -31,13 +31,13 @@ export default function Footer() {
             <span>for your next trip</span>
           </h1>
 
-          <button className="mt-4 sm:mt-6 bg-white text-blue-600 font-medium px-5 sm:px-6 py-2 rounded shadow hover:bg-gray-100 transition">
+          <button className="mt-4 sm:mt-6 bg-white text-blue-600 font-semibold text-sm sm:text-base px-4 sm:px-6 py-2 rounded shadow hover:bg-gray-100 transition">
             Discover homes
           </button>
         </div>
       </div>
 
-      {/* Floating Right Image */}
+      {/* Image - Hidden on mobile */}
       <div className="hidden sm:flex absolute right-0 bottom-0">
         <Image
           src="/Footer1.png"

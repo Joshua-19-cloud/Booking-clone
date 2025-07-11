@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 export default function SearchBar() {
   return (
-    <div className="absolute top-[338px] left-1/2 transform -translate-x-1/2 bg-white p-0 rounded-md shadow-md w-full max-w-6xl z-50 border-4 border-yellow-400">
-      <div className="flex flex-col sm:flex-row divide-y-4 sm:divide-y-0 sm:divide-x-4 divide-yellow-400">
-        {/* First Input - Where are you going? */}
-        <div className="relative flex-1 border-b-4 sm:border-b-0 sm:border-r-4 border-yellow-400">
+    <div className="relative sm:absolute sm:top-[338px] left-1/2 sm:transform sm:-translate-x-1/2 bg-white rounded-md shadow-md w-full max-w-6xl z-50 border-4 border-yellow-400 mx-auto">
+      <div className="flex flex-col sm:flex-row divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-yellow-400">
+        {/* Location */}
+        <div className="relative flex-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
@@ -17,12 +17,12 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="Where are you going?"
-            className="flex-1 px-10 py-4 pt-4 pb-3 rounded w-full text-black placeholder:text-black"
+            className="w-full px-10 py-4 text-sm sm:text-base text-black placeholder:text-gray-500"
           />
         </div>
 
-        {/* Second Input - Dates */}
-        <div className="relative flex-1 border-b-4 sm:border-b-0 sm:border-r-4 border-yellow-400">
+        {/* Dates */}
+        <div className="relative flex-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
@@ -33,13 +33,13 @@ export default function SearchBar() {
           </svg>
           <input
             type="text"
-            placeholder="check-in-date -- check-out-date"
-            className="flex-1 px-10 py-10 pt-4 pb-3 rounded w-full text-black placeholder:text-black"
+            placeholder="Check-in — Check-out"
+            className="w-full px-10 py-4 text-sm sm:text-base text-black placeholder:text-gray-500"
           />
         </div>
 
-        {/* Third Input - Guests */}
-        <div className="relative flex-1 border-b-4 sm:border-b-0 border-yellow-400">
+        {/* Guests */}
+        <div className="relative flex-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
@@ -49,16 +49,18 @@ export default function SearchBar() {
             <path d="M16.5 6a4.5 4.5 0 1 1-9 0..." />
           </svg>
           <input
-            type="number"
-            placeholder="2 adults.0 children.1 room"
-            className="flex-1 px-10 py-10 pt-4 pb-3 rounded mx-0 w-full text-black placeholder:text-black"
+            type="text"
+            placeholder="2 adults • 0 children • 1 room"
+            className="w-full px-10 py-4 text-sm sm:text-base text-black placeholder:text-gray-500"
           />
         </div>
 
-        {/* Search Button */}
-        <button className="bg-blue-600 text-white px-5 py-3 rounded w-full sm:w-auto">
-          Search
-        </button>
+        {/* Button */}
+        <div className="flex justify-end sm:justify-center px-4 py-3 sm:px-0 sm:py-0">
+          <button className="bg-blue-600 text-white w-full sm:w-auto px-5 py-3 rounded hover:bg-blue-700 transition">
+            Search
+          </button>
+        </div>
       </div>
     </div>
   );
