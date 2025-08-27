@@ -3,7 +3,7 @@
 export default function FooterTemp() {
   return (
     <footer className="bg-[#f2f2f2] text-sm text-gray-700 mt-20 sm:mt-40">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
           {[
             {

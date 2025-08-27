@@ -88,7 +88,7 @@ export default function HomePage() {
       {/* Top Header */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <header className="bg-[#003580] px-38 py-4 flex flex-col gap-3">
-        <div className="w-full flex flex-col sm:flex-row items-center justify-end gap-3">
+        <div className="w-full flex items-center justify-end gap-3">
           <Button variant="ghost" className="text-white text-base hover:bg-white/10">INR</Button>
           <img src="/flag1.png" alt="India Flag" className="w-7 h-7 rounded-full" />
           <img src="/mark.png" alt="Help" className="w-10 h-10 rounded-full filter invert" />
@@ -109,9 +109,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="bg-[#003580] text-white h-auto sm:h-[37vh] px-4 sm:px-6 md:px-16 pt-8 relative">
         <div className="px-4 sm:px-[60px] py-8 sm:py-12">
-          <h2 className="font-booking text-5xl font-extrabold">Find your next stay</h2>
-          <p className="text-base sm:text-xl md:text-2xl mt-3 font-sans">Search low prices on hotels, homes and much more...</p>
-        </div>
+  <h2 className="font-booking text-3xl sm:text-5xl font-extrabold">Find your next stay</h2>
+  <p className="text-base sm:text-xl md:text-2xl mt-3 font-sans">Search low prices...</p>
+</div>
+
 
         <Preferences />
 
