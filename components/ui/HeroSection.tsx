@@ -2,7 +2,7 @@
 
 export default function SearchBar() {
   return (
-    <div className="relative sm:absolute sm:top-[338px] left-1/2 sm:transform sm:-translate-x-1/2 bg-white rounded-xl shadow-lg w-[95%] sm:w-full max-w-6xl z-50 border-2 sm:border-4 border-yellow-400 mx-auto">
+    <div className="relative sm:absolute sm:top-[338px] left-1/2 sm:transform sm:-translate-x-1/2 bg-white rounded-xl shadow-lg w-[95%] sm:w-full max-w-6xl z-50 border-2 sm:border-4 border-yellow-400 ">
       <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-yellow-400">
         
         {/* Location */}
@@ -58,7 +58,7 @@ export default function SearchBar() {
 
         {/* Button */}
         <div className="flex justify-end sm:justify-center px-0 py-0 sm:px-0 sm:py-0">
-          <button className="bg-blue-600 text-white w-full sm:w-auto px-6 sm:px-6 py-4 sm:py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-sm sm:text-base">
+          <button className="bg-blue-600 text-white w-full px-6 sm:px-6 py-4 sm:py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-sm sm:text-base">
             Search
           </button>
         </div>
