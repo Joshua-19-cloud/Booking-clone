@@ -255,7 +255,7 @@ export default function HomePage() {
 
       <HeroSection />
       {/* Discover Homes Promo Section */}
-              
+              <HeroSection />
 
       {/* Homes guests love Carousel */}
       <div className="px-4 sm:px-8 md:px-26 mt-10 md:mt-438">
@@ -332,7 +332,6 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                <HeroSection />
               </CarouselItem>
             ))}
           </CarouselContent>
