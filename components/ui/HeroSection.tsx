@@ -57,8 +57,8 @@ export default function SearchBar() {
         </div>
 
         {/* Button */}
-        <div className="flex justify-end sm:justify-center px-2 py-2 sm:px-0 sm:py-0">
-          <button className="bg-blue-600 text-white w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-sm sm:text-base">
+        <div className="flex justify-end sm:justify-center px-0 py-0 sm:px-0 sm:py-0">
+          <button className="bg-blue-600 text-white w-full sm:w-auto px-6 sm:px-6 py-4 sm:py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-sm sm:text-base">
             Search
           </button>
         </div>
