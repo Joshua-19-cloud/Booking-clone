@@ -87,28 +87,51 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col bg-white">
       {/* Top Header */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <header className="bg-[#003580] px-38 py-4 flex flex-col gap-3">
-        <div className="w-full flex items-center justify-end gap-3">
-          <Button variant="ghost" className="text-white text-base hover:bg-white/10">INR</Button>
-          <img src="/flag1.png" alt="India Flag" className="w-7 h-7 rounded-full" />
-          <img src="/mark.png" alt="Help" className="w-10 h-10 rounded-full filter invert" />
-          <Button variant="ghost" className="text-white text-base hover:bg-white/10">List your property</Button>
-          <div className="flex items-center gap-2">
-            <Button className="bg-white text-blue-600 text-sm px-3 py-2 hover:bg-blue-100 border border-blue-600 rounded-md">Register</Button>
-            <Button className="bg-white text-blue-600 text-sm px-4 py-2 hover:bg-blue-100 border border-blue-600 rounded-md">Sign in</Button>
-          </div>
-        </div>
+      <header className="bg-[#003580] px-4 sm:px-34 py-0 flex flex-col gap-1">
+  {/* Top Right Actions */}
+  <div className="w-full flex items-center justify-between px-4 py-8 sm:justify-end gap-3">
+    {/* Logo on the left for mobile */}
+    
+    <header className="bg-[#003580] px-4 sm:px-80 py-0 -mt-5 flex items-center justify-between">
+  {/* Logo always visible */}
+  <h1 className="text-xl sm:text-2xl font-bold text-white">
+    Booking.com
+  </h1>
+</header>
+    <div className="flex items-center gap-3 sm:gap-2 px-22 sm:px-22 -mt-5">
+      <Button
+        variant="ghost"
+        className="text-white text-sm sm:text-base hover:bg-white/10 px-2 sm:px-3"
+      >
+        INR
+      </Button>
+      <img src="/flag1.png" alt="India Flag" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full" />
+      <img src="/mark.png" alt="Help" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full filter invert" />
+      <Button
+        variant="ghost"
+        className="hidden sm:inline-block text-white text-sm sm:text-base hover:bg-white/10"
+      >
+        List your property
+      </Button>
+      <div className="flex items-center gap-1 sm:gap-2">
+        <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-blue-100 border border-blue-600 rounded-md">
+          Register
+        </Button>
+        <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 hover:bg-blue-100 border border-blue-600 rounded-md">
+          Sign in
+        </Button>
+      </div>
+    </div>
+  </div>
 
-        <div className="-mt-17 -ml-4 top-0 left-0 w-full flex flex-col sm:flex-row items-center justify-between px-0 py-4 z-50">
-          <h1 className="text-2xl font-bold text-white">Booking.com</h1>
-        </div>
 
-        <NavButton />
-      </header>
+
+  <NavButton />
+</header>
 
       {/* Hero Section */}
-      <div className="bg-[#003580] text-white h-auto sm:h-[37vh] px-4 sm:px-6 md:px-16 pt-8 relative">
-        <div className="px-4 sm:px-[60px] py-8 sm:py-12">
+      <div className="bg-[#003580] text-white h-auto sm:h-[37vh] px-4 sm:px-6 md:px-16 pt-3 relative">
+        <div className="px-4 sm:px-[60px] py-8 sm:py-18">
   <h2 className="font-booking text-3xl sm:text-5xl font-extrabold">Find your next stay</h2>
   <p className="text-base sm:text-xl md:text-2xl mt-3 font-sans">Search low prices...</p>
 </div>
@@ -116,7 +139,7 @@ export default function HomePage() {
 
         <Preferences />
 
-        <div className="left-0 w-full items-center -mt-8">
+        <div className="left-0 w-full items-center -mt-3">
           <h3 className="text-2xl font-bold px-11 text-gray-900">Offers</h3>
           <p className="text-l text-gray-600 px-11 py-1">Promotions, deals and special offers for you</p>
         </div>
@@ -140,8 +163,8 @@ export default function HomePage() {
           <h4 className="text-2xl font-bold text-black">Popular destinations with travellers from India</h4>
         </div>
 
-        <div className="flex gap-4 px-11 mt-10">
-          <div className="relative w-full sm:w-[48%] h-[200px] sm:h-[250px] rounded-lg shadow-md overflow-hidden">
+        <div className="flex flex-col sm:flex-row gap-4 px-4 sm:px-11 mt-10">
+          <div className="relative w-full sm:w-[48%] h-[160px] sm:h-[250px] rounded-lg shadow-md overflow-hidden">
             <img src="/taj.PNG" alt="Taj Mahal" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <h2 className="absolute top-4 left-4 text-white text-2xl font-bold">New Delhi</h2>
