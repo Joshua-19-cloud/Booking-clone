@@ -98,45 +98,34 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Top Header */}
-      <header className="bg-[#003580] py-2 sm:py-1">
-        {/* Top Bar */}
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6">
-          {/* Logo */}
-          <h1 className="text-xl sm:text-2xl font-bold text-white">
-            Booking.com
-          </h1>
+      <header className="bg-[#003580] py-2 sm:py-1 w-full">
+  <div className="flex items-center justify-between px-4 sm:px-6 w-full">
+    {/* Logo */}
+    <h1 className="text-xl sm:text-2xl font-bold text-white flex-shrink-0">
+      Booking.com
+    </h1>
 
-          {/* Right Actions */}
-          <div className="flex items-center gap-2 sm:gap-4">
-            <Button
-              variant="ghost"
-              className="text-white text-sm hover:bg-white/10 px-2"
-            >
-              INR
-            </Button>
-            <img src="/flag1.png" alt="India Flag" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full" />
-            <img
-              src="/mark.png"
-              alt="Help"
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full filter invert"
-            />
-            <Button
-              variant="ghost"
-              className="hidden md:inline-block text-white text-sm hover:bg-white/10"
-            >
-              List your property
-            </Button>
+    {/* Right actions */}
+    <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
+      <Button variant="ghost" className="text-white text-sm hover:bg-white/10 px-2">
+        INR
+      </Button>
+      <img src="/flag1.png" alt="India Flag" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full" />
+      <img src="/mark.png" alt="Help" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full filter invert" />
+      <Button variant="ghost" className="hidden md:inline-block text-white text-sm hover:bg-white/10">
+        List your property
+      </Button>
 
-            <div className="flex items-center gap-1 sm:gap-2">
-              <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 py-1.5 hover:bg-blue-100 border border-blue-600 rounded-md">
-                Register
-              </Button>
-              <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-4 py-1.5 hover:bg-blue-100 border border-blue-600 rounded-md">
-                Sign in
-              </Button>
-            </div>
-          </div>
-        </div>
+      <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
+        <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 py-1.5 hover:bg-blue-100 border border-blue-600 rounded-md">
+          Register
+        </Button>
+        <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-4 py-1.5 hover:bg-blue-100 border border-blue-600 rounded-md">
+          Sign in
+        </Button>
+      </div>
+    </div>
+  </div>
 
         {/* Nav Buttons */}
         <div className="flex overflow-x-auto sm:overflow-visible px-4 sm:px-6 mt-2 pb-2">
