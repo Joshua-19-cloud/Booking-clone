@@ -18,6 +18,12 @@ import {
 import { FeatureHighlights } from "@/components/ui/FeatureHighlights"
 import GeniusSignIn from "@/components/ui/GeniusSignIn"
 import Footer1 from "@/components/Footer1"
+import type { Viewport } from "next"
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
 
 export default function HomePage() {
   const [date, setDate] = useState<Date | undefined>(new Date())
@@ -306,7 +312,7 @@ export default function HomePage() {
 
       {/* Homes guests love Carousel */}
       <div className="px-4 sm:px-8 md:px-26 mt-10 md:mt-438">
-        <h2 className="text-2xl font-bold text-black mb-0">Homes guests love</h2>
+        <h2 className="text-2xl font-bold text-black mb-0">Home guests love</h2>
         <Carousel className="w-full">
           <CarouselContent>
             {[
