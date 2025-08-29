@@ -102,7 +102,7 @@ export default function HomePage() {
 
       <header className="bg-[#003580] px-34 sm:px-34 py-0 sm:py-1 flex flex-col gap-1">
         {/* Top Right Actions */}
-        <div className="w-full flex items-center justify-between px-2 sm:px-4 sm:py-8 py-8 sm:justify-end gap-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 ">
           {/* Logo on the left for mobile */}
           <header className="bg-[#003580] px-4 sm:px-80 py-0 -mt-5 flex items-center justify-between">
             {/* Logo always visible */}
