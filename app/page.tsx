@@ -98,21 +98,19 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Top Header */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      <header className="bg-[#003580] py-0 sm:py-1 flex flex-col gap-1">
+      <header className="bg-[#003580] py-2 sm:py-1">
         {/* Top Bar */}
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6">
           {/* Logo */}
-          <h1 className="text-xl sm:text-2xl font-bold text-white text-left sm:text-center">
+          <h1 className="text-xl sm:text-2xl font-bold text-white">
             Booking.com
           </h1>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-3 sm:gap-2">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Button
               variant="ghost"
-              className="text-white text-sm sm:text-base hover:bg-white/10 px-2 sm:px-3"
+              className="text-white text-sm hover:bg-white/10 px-2"
             >
               INR
             </Button>
@@ -124,16 +122,16 @@ export default function HomePage() {
             />
             <Button
               variant="ghost"
-              className="hidden sm:inline-block text-white text-sm sm:text-base hover:bg-white/10"
+              className="hidden md:inline-block text-white text-sm hover:bg-white/10"
             >
               List your property
             </Button>
 
             <div className="flex items-center gap-1 sm:gap-2">
-              <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-blue-100 border border-blue-600 rounded-md">
+              <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 py-1.5 hover:bg-blue-100 border border-blue-600 rounded-md">
                 Register
               </Button>
-              <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 hover:bg-blue-100 border border-blue-600 rounded-md">
+              <Button className="bg-white text-blue-600 text-xs sm:text-sm px-2 sm:px-4 py-1.5 hover:bg-blue-100 border border-blue-600 rounded-md">
                 Sign in
               </Button>
             </div>
@@ -141,100 +139,103 @@ export default function HomePage() {
         </div>
 
         {/* Nav Buttons */}
-        <div className="overflow-x-auto sm:overflow-visible px-2 sm:px-0">
+        <div className="flex overflow-x-auto sm:overflow-visible px-4 sm:px-6 mt-2 pb-2">
           <NavButton />
         </div>
       </header>
 
-      {/* Rest of your code remains unchanged... */}
-
-
       {/* Hero Section */}
-      <div className="bg-[#003580] text-white h-[15] sm:h-[35vh] px-4 sm:px-6 md:px-16 pt-3 relative">
-        <div className="px-20 sm:px-[55px] py6 sm:py-8">
-          <h2 className="font-booking text-3xl sm:text-5xl font-extrabold">
+      <div className="bg-[#003580] text-white pt-4 md:pt-10 pb-16 px-4 sm:px-6 md:px-16 relative">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-booking text-3xl sm:text-4xl md:text-5xl font-extrabold">
             Find your next stay
           </h2>
-          <p className="text-base sm:text-xl md:text-2xl mt-3 font-sans">
-            Search low prices...
+          <p className="text-base sm:text-lg md:text-xl mt-2 font-sans">
+            Search low prices on hotels, homes and much more...
           </p>
         </div>
 
-        <Preferences />
+        <div className="max-w-7xl mx-auto mt-6 md:mt-10">
+          <Preferences />
+        </div>
+      </div>
 
-        <div className="left-0 w-full items-center -mt-3">
-          <h3 className="text-2xl font-bold px-11 text-gray-900">Offers</h3>
-          <p className="text-l text-gray-600 px-11 py-1">
+      <main className="bg-white">
+        {/* Offers and Promotions Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 mt-8 sm:mt-12">
+          <h3 className="text-2xl font-bold text-gray-900">Offers</h3>
+          <p className="text-base text-gray-600 mt-1">
             Promotions, deals and special offers for you
           </p>
-        </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <PromoBannerCard
+              title="Quick escape, quality time"
+              subtitle="Save up to 20% with a Getaway Deal"
+              buttonText="Save on stays"
+              image="/travel.png"
+            />
+            <HolidayPromoCard
+              tag="Holiday rentals"
+              title="Live the dream in a holiday home"
+              subtitle="Choose from houses, villas, chalets and more"
+              buttonText="Book yours"
+              backgroundImage="/holiday.png"
+            />
+          </div>
+        </section>
 
-        <PromoBannerCard
-          title="Quick escape, quality time"
-          subtitle="Save up to 20% with a Getaway Deal"
-          buttonText="Save on stays"
-          image="/travel.png"
-        />
-
-        <HolidayPromoCard
-          tag="Holiday rentals"
-          title="Live the dream in a holiday home"
-          subtitle="Choose from houses, villas, chalets and more"
-          buttonText="Book yours"
-          backgroundImage="/holiday.png"
-        />
-
-        <div className="w-full items-center justify-between px-11 mt-14">
-          <h4 className="text-2xl font-bold text-black">
+        {/* Popular Destinations Grid */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 mt-12">
+          <h4 className="text-2xl font-bold text-black mb-6">
             Popular destinations with travellers from India
           </h4>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 px-4 sm:px-11 mt-10">
-          <div className="relative w-full sm:w-[48%] h-[160px] sm:h-[250px] rounded-lg shadow-md overflow-hidden">
-            <img src="/taj.PNG" alt="Taj Mahal" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <h2 className="absolute top-4 left-4 text-white text-2xl font-bold">New Delhi</h2>
-            </div>
-          </div>
-          <div className="relative w-full sm:w-[48%] h-[250px] rounded-lg shadow-md overflow-hidden">
-            <img src="/vidhana.png" alt="Vidhana Soudha" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <h2 className="absolute top-4 left-4 text-white text-2xl font-bold">Bengaluru</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex gap-4 px-11 mt-10">
-          {[
-            { src: "/mumbai.png", title: "Mumbai" },
-            { src: "/chennai.png", title: "Chennai" },
-            { src: "/varanasi.png", title: "Varanasi" },
-          ].map((img, i) => (
-            <div
-              key={i}
-              className="relative w-full sm:w-[380px] h-[220px] rounded-lg shadow-md overflow-hidden"
-            >
-              <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/30">
-                <h2 className="absolute top-4 left-4 text-white text-2xl font-bold">
-                  {img.title}
-                </h2>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="relative w-full sm:w-[48%] h-[160px] sm:h-[250px] rounded-lg shadow-md overflow-hidden">
+              <img src="/taj.PNG" alt="Taj Mahal" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black/30 flex items-end p-4">
+                <h2 className="text-white text-xl sm:text-2xl font-bold">New Delhi</h2>
               </div>
             </div>
-          ))}
-        </div>
+            <div className="relative w-full sm:w-[48%] h-[160px] sm:h-[250px] rounded-lg shadow-md overflow-hidden">
+              <img src="/vidhana.png" alt="Vidhana Soudha" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black/30 flex items-end p-4">
+                <h2 className="text-white text-xl sm:text-2xl font-bold">Bengaluru</h2>
+              </div>
+            </div>
+          </div>
 
-        <div className="px-11 mt-10">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-4">
+            {[
+              { src: "/mumbai.png", title: "Mumbai" },
+              { src: "/chennai.png", title: "Chennai" },
+              { src: "/varanasi.png", title: "Varanasi" },
+            ].map((img, i) => (
+              <div
+                key={i}
+                className="relative w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-10.667px)] lg:w-[calc(25%-12px)] h-[180px] rounded-lg shadow-md overflow-hidden"
+              >
+                <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/30 flex items-end p-4">
+                  <h2 className="text-white text-xl sm:text-2xl font-bold">
+                    {img.title}
+                  </h2>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Explore Destinations Carousel */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Explore destinations in India
           </h2>
           <Carousel className="w-full">
-            <CarouselContent>
+            <CarouselContent className="-ml-2">
               {carouselItems.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full sm:basis-[48%] md:basis-[18%] px-2"
+                  className="basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/5 pl-2"
                 >
                   <div className="flex flex-col items-center">
                     <img
@@ -242,10 +243,10 @@ export default function HomePage() {
                       alt={item.name}
                       className="w-full h-[150px] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                     />
-                    <h2 className="mt-2 text-sm font-semibold text-gray-800 truncate text-center">
+                    <h2 className="mt-2 text-base font-semibold text-gray-800 truncate text-center">
                       {item.name}
                     </h2>
-                    <p className="text-xs text-gray-500 truncate text-center">
+                    <p className="text-sm text-gray-500 truncate text-center">
                       {item.location}
                     </p>
                   </div>
@@ -255,20 +256,18 @@ export default function HomePage() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
+        </section>
 
-        <div className="px-11 mt-10">
-          <h2 className="text-2xl font-bold text-black mb-4">Deals for the weekend</h2>
-          <p className="text-m text-gray-600 -mt-3">Save on stays for 11 July - 13 July</p>
-        </div>
-
-        <div className="pl-11">
-          <Carousel className="w-full">
-            <CarouselContent>
+        {/* Deals for the weekend Carousel */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 mt-12">
+          <h2 className="text-2xl font-bold text-black mb-1">Deals for the weekend</h2>
+          <p className="text-base text-gray-600">Save on stays for 11 July - 13 July</p>
+          <Carousel className="w-full mt-4">
+            <CarouselContent className="-ml-2">
               {hotelCarouselItems.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full sm:basis-[48%] md:basis-[23%] px-2 py-4"
+                  className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-2 py-4"
                 >
                   <div className="flex flex-col w-full">
                     <img
@@ -309,115 +308,110 @@ export default function HomePage() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div>
-      </div>
+        </section>
 
-      <HeroSection />
-
-      {/* Discover Homes Promo Section */}
-      <HeroSection />
-
-      {/* Homes guests love Carousel */}
-      <div className="px-4 sm:px-8 md:px-26 mt-10 md:mt-438">
-        <h2 className="text-2xl font-bold text-black mb-0">Home guests love</h2>
-        <Carousel className="w-full">
-          <CarouselContent>
-            {[
-              {
-                img: "/Aparthotel Stare Miasto.png",
-                title: "Aparthotel Stare Miasto",
-                location: "Old Town, Poland, Kraków",
-                rating: "8.8",
-                reviewText: "Fabulous",
-                reviewCount: "3,297",
-                price: "₹13,257",
-              },
-              {
-                img: "/7Seasons Apartments Budapest.png",
-                title: "7Seasons Apartments Budapest",
-                location: "06. Terézváros, Hungary, Budapest",
-                rating: "8.7",
-                reviewText: "Fabulous",
-                reviewCount: "11,119",
-                price: "₹11,885",
-              },
-              {
-                img: "/Downtown Synagogue.png",
-                title: "Downtown Synagogue",
-                location: "07. Erzsébetváros, Hungary, Budapest",
-                rating: "8.4",
-                reviewText: "Very good",
-                reviewCount: "134",
-                price: "₹11,042",
-              },
-              {
-                img: "/Numa Florence Vita.png",
-                title: "Numa Florence Vita",
-                location: "Santa Maria Novella, Italy, Florence",
-                rating: "8.9",
-                reviewText: "Fabulous",
-                reviewCount: "1,314",
-                price: "₹23,489",
-              },
-              {
-                img: "/Cheval Three Quays at The Tower of London.png",
-                title: "Cheval Three Quays at The Tower of London",
-                location: "City of London, United Kingdom, London",
-                rating: "9.4",
-                reviewText: "Superb",
-                reviewCount: "757",
-                price: "₹49,850",
-              },
-            ].map((item, i) => (
-              <CarouselItem key={i} className="basis-[22%] px-2 py-4">
-                <div className="min-w-[250px] max-w-[280px] bg-white rounded-lg shadow hover:shadow-md transition p-3">
-                  <div className="relative h-[220px] w-full rounded-lg overflow-hidden">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
-                    <button className="absolute top-2 right-2 bg-white rounded-full p-1 shadow">
-                      <svg
-                        className="w-5 h-5 text-gray-500"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="mt-3">
-                    <h3 className="font-semibold text-sm text-gray-900 line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-gray-500">{item.location}</p>
-                    <div className="flex items-center gap-1 text-xs mt-2">
-                      <span className="bg-blue-700 text-white px-1.5 py-0.5 rounded text-xs font-bold">
-                        {item.rating}
-                      </span>
-                      <span className="text-gray-700 font-medium">{item.reviewText}</span>
-                      <span className="text-gray-500">({item.reviewCount} reviews)</span>
+        {/* Home guests love Carousel */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 mt-12">
+          <h2 className="text-2xl font-bold text-black mb-4">Home guests love</h2>
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-2">
+              {[
+                {
+                  img: "/Aparthotel Stare Miasto.png",
+                  title: "Aparthotel Stare Miasto",
+                  location: "Old Town, Poland, Kraków",
+                  rating: "8.8",
+                  reviewText: "Fabulous",
+                  reviewCount: "3,297",
+                  price: "₹13,257",
+                },
+                {
+                  img: "/7Seasons Apartments Budapest.png",
+                  title: "7Seasons Apartments Budapest",
+                  location: "06. Terézváros, Hungary, Budapest",
+                  rating: "8.7",
+                  reviewText: "Fabulous",
+                  reviewCount: "11,119",
+                  price: "₹11,885",
+                },
+                {
+                  img: "/Downtown Synagogue.png",
+                  title: "Downtown Synagogue",
+                  location: "07. Erzsébetváros, Hungary, Budapest",
+                  rating: "8.4",
+                  reviewText: "Very good",
+                  reviewCount: "134",
+                  price: "₹11,042",
+                },
+                {
+                  img: "/Numa Florence Vita.png",
+                  title: "Numa Florence Vita",
+                  location: "Santa Maria Novella, Italy, Florence",
+                  rating: "8.9",
+                  reviewText: "Fabulous",
+                  reviewCount: "1,314",
+                  price: "₹23,489",
+                },
+                {
+                  img: "/Cheval Three Quays at The Tower of London.png",
+                  title: "Cheval Three Quays at The Tower of London",
+                  location: "City of London, United Kingdom, London",
+                  rating: "9.4",
+                  reviewText: "Superb",
+                  reviewCount: "757",
+                  price: "₹49,850",
+                },
+              ].map((item, i) => (
+                <CarouselItem key={i} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-2 py-4">
+                  <div className="bg-white rounded-lg shadow hover:shadow-md transition p-3">
+                    <div className="relative h-[220px] w-full rounded-lg overflow-hidden">
+                      <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                      <button className="absolute top-2 right-2 bg-white rounded-full p-1 shadow">
+                        <svg
+                          className="w-5 h-5 text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                      </button>
                     </div>
-                    <p className="text-sm text-gray-700 mt-2">
-                      Starting from <span className="font-bold">{item.price}</span>
-                    </p>
+                    <div className="mt-3">
+                      <h3 className="font-semibold text-sm text-gray-900 line-clamp-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-gray-500">{item.location}</p>
+                      <div className="flex items-center gap-1 text-xs mt-2">
+                        <span className="bg-blue-700 text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                          {item.rating}
+                        </span>
+                        <span className="text-gray-700 font-medium">{item.reviewText}</span>
+                        <span className="text-gray-500">({item.reviewCount} reviews)</span>
+                      </div>
+                      <p className="text-sm text-gray-700 mt-2">
+                        Starting from <span className="font-bold">{item.price}</span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </section>
 
-      <FeatureHighlights />
+        <FeatureHighlights />
 
-      <div className="px-4 sm:px-26 mt-10">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Travel more, spend less</h3>
-        <GeniusSignIn />
-        <Footer1 />
-        <Footer />
-      </div>
+        <div className="px-4 sm:px-6 md:px-16 mt-10">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Travel more, spend less</h3>
+          <GeniusSignIn />
+          <Footer1 />
+          <Footer />
+        </div>
+      </main>
     </div>
   )
 }
