@@ -85,7 +85,7 @@ const navItems = [
 ];
 export default function NavButtons() {
   return (
-    <section className="w-full px-0 sm:px-0 -ml-4 sm:-ml-4 -mt-6 sm:-mt-6 py-3 sm:py-3">
+    <section className="w-full px-0 sm:px-0 ml-5 sm:ml-21 -mt-6 sm:-mt-6 py-8 sm:py-8">
       <div className="max-w-7xl mx-auto overflow-x-auto">
         <nav>
           <ul className="inline-flex gap-2 px-4 sm:px-0 whitespace-nowrap">
