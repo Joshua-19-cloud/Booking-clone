@@ -85,10 +85,10 @@ const navItems = [
 ];
 export default function NavButtons() {
   return (
-    <section className="w-full px-0 sm:px-0 ml-5 sm:-ml-4 -mt-6 sm:-mt-6 py-8 sm:py-3">
+    <section className="w-full px-2 sm:px-6 lg:px-0 mt-2 sm:mt-4">
       <div className="max-w-7xl mx-auto overflow-x-auto">
         <nav>
-          <ul className="inline-flex gap-2 px-4 sm:px-0 whitespace-nowrap">
+          <ul className="inline-flex gap-2 px-2 sm:px-0 whitespace-nowrap">
             {navItems.map((item, idx) => (
               <li
                 key={idx}

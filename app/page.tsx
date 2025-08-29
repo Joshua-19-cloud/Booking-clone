@@ -143,7 +143,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <div className="bg-[#003580] text-white h-auto sm:h-[35vh] px-4 sm:px-6 md:px-16 pt-3 relative">
+      <div className="bg-[#003580] text-white h-[15] sm:h-[35vh] px-4 sm:px-6 md:px-16 pt-3 relative">
         <div className="px-20 sm:px-[55px] py6 sm:py-8">
           <h2 className="font-booking text-3xl sm:text-5xl font-extrabold">
             Find your next stay
