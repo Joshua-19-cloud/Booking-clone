@@ -59,7 +59,7 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="2 adults • 0 children • 1 room"
-            className="w-full px-8 sm:px-10 py-2 sm:py-4 text-xs sm:text-base text-black placeholder:text-gray-500 rounded-b-xl sm:rounded-r-xl focus:outline-none"
+            className="w-full px-4 sm:px-10 py-10 sm:py-4 text-xs sm:text-base text-black placeholder:text-gray-500 rounded-b-xl sm:rounded-r-xl focus:outline-none"
           />
         </div>
 
