@@ -128,11 +128,10 @@ export default function HomePage() {
   </div>
 
         {/* Nav Buttons */}
-        <div className="flex overflow-x-auto sm:overflow-visible px-4 sm:px-6 mt-2 pb-2">
-          <NavButton />
-        </div>
-      </header>
-
+         <div className="flex overflow-x-auto px-4 sm:px-6 mt-2 pb-2 w-full">
+    <NavButton />
+  </div>
+</header>
       {/* Hero Section */}
       <div className="bg-[#003580] text-white pt-4 md:pt-10 pb-16 px-4 sm:px-6 md:px-16 relative">
         <div className="max-w-7xl mx-auto">
