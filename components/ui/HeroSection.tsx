@@ -2,14 +2,14 @@
 
 export default function SearchBar() {
   return (
-    <div className="relative sm:absolute top-[338px] sm:top-[338px] left-1/2 sm:transform sm:-translate-x-1/2 bg-white rounded-xl shadow-lg w-[95%] sm:w-full max-w-6xl z-50 border-2 sm:border-4 border-yellow-400">
+    <div className="relative sm:absolute top-[300px] sm:top-[338px] left-1/2 sm:transform sm:-translate-x-1/2 bg-white rounded-xl shadow-lg w-[95%] sm:w-full max-w-6xl z-50 border-2 sm:border-4 border-yellow-400">
       <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-yellow-400">
         
         {/* Location */}
-        <div className="relative flex-1 order-1">
+        <div className="relative flex-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 sm:w-5 sm:h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+            className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -18,15 +18,15 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="Where are you going?"
-            className="w-full px-8 sm:px-10 py-2 sm:py-4 text-xs sm:text-base text-black placeholder:text-gray-500 rounded-t-xl sm:rounded-l-xl focus:outline-none"
+            className="w-full px-10 py-3 sm:py-4 text-sm sm:text-base text-black placeholder:text-gray-500 rounded-t-xl sm:rounded-l-xl focus:outline-none"
           />
         </div>
 
         {/* Dates */}
-        <div className="relative flex-1 order-2">
+        <div className="relative flex-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 sm:w-5 sm:h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+            className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -35,22 +35,15 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="Check-in — Check-out"
-            className="w-full px-8 sm:px-10 py-2 sm:py-4 text-xs sm:text-base text-black placeholder:text-gray-500 focus:outline-none"
+            className="w-full px-10 py-3 sm:py-4 text-sm sm:text-base text-black placeholder:text-gray-500 focus:outline-none"
           />
         </div>
 
-        {/* Search Button (moved before Guests on mobile) */}
-        <div className="flex justify-end sm:justify-center order-3 sm:order-4">
-          <button className="bg-blue-600 text-white w-full px-6 sm:px-6 py-4 sm:py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-sm sm:text-base">
-            Search
-          </button>
-        </div>
-
         {/* Guests */}
-        <div className="relative flex-1 order-4 sm:order-3">
+        <div className="relative flex-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 sm:w-5 sm:h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+            className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -59,10 +52,16 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="2 adults • 0 children • 1 room"
-            className="w-full px-4 sm:px-10 py-10 sm:py-4 text-xs sm:text-base text-black placeholder:text-gray-500 rounded-b-xl sm:rounded-r-xl focus:outline-none"
+            className="w-full px-10 py-3 sm:py-4 text-sm sm:text-base text-black placeholder:text-gray-500 rounded-b-xl sm:rounded-r-xl focus:outline-none"
           />
         </div>
 
+        {/* Button */}
+        <div className="flex justify-center sm:justify-center">
+          <button className="bg-blue-600 text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-sm sm:text-base">
+            Search
+          </button>
+        </div>
       </div>
     </div>
   );
