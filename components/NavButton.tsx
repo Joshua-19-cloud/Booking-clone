@@ -101,11 +101,12 @@ export default function NavButtons() {
               <li
                 key={idx}
                 className={`
-                  flex items-center gap-2 text-base cursor-pointer
-                  px-5 py-3 rounded-full shrink-0
+                  flex items-center gap-2 cursor-pointer
+                  px-6 py-3 rounded-full shrink-0
+                  text-sm font-medium
                   ${idx === 0 
                     ? "bg-blue-900 text-white border border-white" 
-                    : "hover:bg-blue-900 text-white"}
+                    : "bg-transparent text-white hover:bg-blue-900/80"}
                 `}
               >
                 <Link href={item.href} className="flex items-center gap-2">
@@ -118,5 +119,5 @@ export default function NavButtons() {
         </nav>
       </div>
     </section>
-  )
+  );
 }

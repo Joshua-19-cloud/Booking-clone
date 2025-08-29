@@ -100,16 +100,16 @@ export default function HomePage() {
       {/* Top Header */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <header className="bg-[#003580] px-34 sm:px-34 py-0 sm:py-1 flex flex-col gap-1">
-        {/* Top Right Actions */}
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 ">
-          {/* Logo on the left for mobile */}
-          <header className="bg-[#003580] px-4 sm:px-80 py-0 -mt-5 flex items-center justify-between">
-            {/* Logo always visible */}
-            <h1 className="text-xl sm:text-2xl font-bold text-white">Booking.com</h1>
-          </header>
+      <header className="bg-[#003580] py-0 sm:py-1 flex flex-col gap-1">
+        {/* Top Bar */}
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+          {/* Logo */}
+          <h1 className="text-xl sm:text-2xl font-bold text-white text-left sm:text-center">
+            Booking.com
+          </h1>
 
-          <div className="flex items-center gap-3 sm:gap-2 px-18 sm:px-22 -mt-5">
+          {/* Right Actions */}
+          <div className="flex items-center gap-3 sm:gap-2">
             <Button
               variant="ghost"
               className="text-white text-sm sm:text-base hover:bg-white/10 px-2 sm:px-3"
@@ -139,8 +139,15 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <NavButton />
+
+        {/* Nav Buttons */}
+        <div className="overflow-x-auto sm:overflow-visible px-2 sm:px-0">
+          <NavButton />
+        </div>
       </header>
+
+      {/* Rest of your code remains unchanged... */}
+
 
       {/* Hero Section */}
       <div className="bg-[#003580] text-white h-[15] sm:h-[35vh] px-4 sm:px-6 md:px-16 pt-3 relative">
