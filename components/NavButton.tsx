@@ -120,20 +120,24 @@ export default function NavButton() {
               </svg>
             </li>
 
+            {/* Full-screen mobile menu */}
             {isOpen && (
-              <ul className="absolute top-full left-0 right-0 z-10 mt-1 bg-blue-900 border border-white rounded-lg shadow-lg py-2">
-                {otherItems.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-2 px-6 py-3 text-white hover:bg-blue-800 transition-colors duration-200"
-                  >
-                    <Link href={item.href} className="flex items-center gap-2 w-full">
-                      <span className="w-6 h-6">{item.icon}</span>
-                      <span>{item.label}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="fixed inset-0 z-50 bg-blue-900 overflow-y-auto">
+                <ul className="flex flex-col mt-20 space-y-4 px-6">
+                  {navItems.map((item, idx) => (
+                    <li key={idx} className="text-white text-lg font-semibold">
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-4 py-4 border-b border-blue-700"
+                        onClick={() => setIsOpen(false)} // Close menu on click
+                      >
+                        <span className="w-8 h-8">{item.icon}</span>
+                        <span>{item.label}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </ul>
 
