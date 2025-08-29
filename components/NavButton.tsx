@@ -6,12 +6,7 @@ import Link from "next/link";
 const navItems = [
   {
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
         <path d="M2.75 12h18.5c.69 0 1.25.56 1.25 1.25V18l.75-.75H.75l.75.75v-4.75c0-.69.56-1.25 1.25-1.25m0-1.5A2.75 2.75 0 0 0 0 13.25V18c0 .414.336.75.75.75h22.5A.75.75 0 0 0 24 18v-4.75a2.75 2.75 0 0 0-2.75-2.75zM0 18v3a.75.75 0 0 0 1.5 0v-3A.75.75 0 0 0 0 18m22.5 0v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0m-.75-6.75V4.5a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 2.25 4.5v6.75a.75.75 0 0 0 1.5 0V4.5a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 0 1.5 0m-13.25-3h7a.25.25 0 0 1 .25.25v2.75l.75-.75h-9l.75.75V8.5a.25.25 0 0 1 .25-.25m0-1.5A1.75 1.75 0 0 0 6.75 8.5v2.75c0 .414.336.75.75.75h9a.75.75 0 0 0 .75-.75V8.5a1.75 1.75 0 0 0-1.75-1.75z"></path>
       </svg>
     ),
@@ -93,22 +88,19 @@ const navItems = [
 export default function NavButton() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleDropdown = () => setIsOpen(!isOpen);
 
-  // Find the active item (or a default, e.g., 'Stays')
-  const activeItem = navItems[0];
+  const activeItem = navItems[0]; // Default active
   const otherItems = navItems.slice(1);
 
   return (
-    <section className="w-full px-2 sm:px-0 py-3">
+    <section className="w-full px-2 sm:px-0 py-3 bg-blue-800">
       <div className="max-w-7xl mx-auto relative">
         <nav>
           {/* Mobile Dropdown */}
-          <ul className="flex sm:hidden flex-col">
+          <ul className="flex sm:hidden flex-col relative">
             <li
-              className="relative flex items-center gap-2 cursor-pointer 
+              className="relative flex items-center justify-between gap-2 cursor-pointer 
               px-6 py-3 rounded-full text-sm font-medium
               bg-blue-900 text-white border border-white"
               onClick={toggleDropdown}
@@ -124,22 +116,16 @@ export default function NavButton() {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </li>
+
             {isOpen && (
-              <div className="absolute top-full left-0 right-0 z-10 mt-1
-              bg-blue-900 border border-white rounded-lg shadow-lg py-2">
+              <ul className="absolute top-full left-0 right-0 z-10 mt-1 bg-blue-900 border border-white rounded-lg shadow-lg py-2">
                 {otherItems.map((item, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2 px-6 py-3
-                    text-white hover:bg-blue-800 transition-colors duration-200"
+                    className="flex items-center gap-2 px-6 py-3 text-white hover:bg-blue-800 transition-colors duration-200"
                   >
                     <Link href={item.href} className="flex items-center gap-2 w-full">
                       <span className="w-6 h-6">{item.icon}</span>
@@ -147,7 +133,7 @@ export default function NavButton() {
                     </Link>
                   </li>
                 ))}
-              </div>
+              </ul>
             )}
           </ul>
 
@@ -161,8 +147,8 @@ export default function NavButton() {
                   text-sm font-medium
                   ${idx === 0
                     ? "bg-blue-900 text-white border border-white"
-                    : "bg-transparent text-white hover:bg-blue-900/80"}
-                `}
+                    : "bg-transparent text-white hover:bg-blue-900/80 hover:border hover:border-white transition-colors duration-200"
+                  }`}
               >
                 <Link href={item.href} className="flex items-center gap-2">
                   <span className="w-6 h-6">{item.icon}</span>
