@@ -100,7 +100,7 @@ export default function HomePage() {
       {/* Top Header */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <header className="bg-[#003580] px-15 sm:px-34 py-0 sm:py-1 flex flex-col gap-1">
+      <header className="bg-[#003580] px-34 sm:px-34 py-0 sm:py-1 flex flex-col gap-1">
         {/* Top Right Actions */}
         <div className="w-full flex items-center justify-between px-2 sm:px-4 sm:py-8 py-8 sm:justify-end gap-3">
           {/* Logo on the left for mobile */}
@@ -108,8 +108,8 @@ export default function HomePage() {
             {/* Logo always visible */}
             <h1 className="text-xl sm:text-2xl font-bold text-white">Booking.com</h1>
           </header>
-
-          <div className="flex items-center gap-3 sm:gap-2 px-22 sm:px-22 -mt-5">
+<NavButton />
+          <div className="flex items-center gap-3 sm:gap-2 px-18 sm:px-22 -mt-5">
             <Button
               variant="ghost"
               className="text-white text-sm sm:text-base hover:bg-white/10 px-2 sm:px-3"
@@ -139,7 +139,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <NavButton />
+        
       </header>
 
       {/* Hero Section */}
