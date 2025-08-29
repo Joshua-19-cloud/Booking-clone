@@ -100,9 +100,9 @@ export default function HomePage() {
       {/* Top Header */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <header className="bg-[#003580] px-30 sm:px-34 py-0 sm:py-1 flex flex-col gap-1">
+      <header className="bg-[#003580] px-15 sm:px-34 py-0 sm:py-1 flex flex-col gap-1">
         {/* Top Right Actions */}
-        <div className="w-full flex items-center justify-between px-4 sm:px-4 sm:py-8 py-8 sm:justify-end gap-3">
+        <div className="w-full flex items-center justify-between px-2 sm:px-4 sm:py-8 py-8 sm:justify-end gap-3">
           {/* Logo on the left for mobile */}
           <header className="bg-[#003580] px-4 sm:px-80 py-0 -mt-5 flex items-center justify-between">
             {/* Logo always visible */}
