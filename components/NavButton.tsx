@@ -85,19 +85,24 @@ const navItems = [
 ];
 export default function NavButtons() {
   return (
-    <section className="w-full px-2 sm:px-6 lg:px-0 mt-2 sm:mt-4">
-      <div className="max-w-7xl mx-auto overflow-x-auto">
+    <section className="w-full px-0 sm:px-0 ml-3 sm:ml-0 -mt-4 sm:-mt-6 py-4 sm:py-3">
+      <div className="max-w-7xl mx-auto">
         <nav>
-          <ul className="inline-flex gap-2 px-2 sm:px-0 whitespace-nowrap">
+          <ul
+            className="
+              flex gap-2 px-2 sm:px-0 
+              overflow-x-auto sm:overflow-visible
+              whitespace-nowrap sm:whitespace-normal
+              scrollbar-hide
+              sm:justify-center sm:flex-wrap
+            "
+          >
             {navItems.map((item, idx) => (
               <li
                 key={idx}
                 className={`flex items-center gap-2 text-sm cursor-pointer px-4 py-2 rounded-full shrink-0
-                  ${
-                    idx === 0
-                      ? 'bg-blue-900 text-white border border-white'
-                      : 'hover:bg-blue-900'
-                  }`}
+                  ${idx === 0 ? "bg-blue-900 text-white border border-white" : "hover:bg-blue-900"}
+                `}
               >
                 <Link href={item.href} className="flex items-center gap-2 text-white">
                   <span>{item.icon}</span>

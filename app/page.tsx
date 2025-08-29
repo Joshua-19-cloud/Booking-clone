@@ -108,7 +108,7 @@ export default function HomePage() {
             {/* Logo always visible */}
             <h1 className="text-xl sm:text-2xl font-bold text-white">Booking.com</h1>
           </header>
-<NavButton />
+
           <div className="flex items-center gap-3 sm:gap-2 px-18 sm:px-22 -mt-5">
             <Button
               variant="ghost"
@@ -139,7 +139,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        
+        <NavButton />
       </header>
 
       {/* Hero Section */}
