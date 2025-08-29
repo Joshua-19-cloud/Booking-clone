@@ -122,7 +122,7 @@ export default function NavButton() {
 
             {/* Full-screen mobile menu */}
             {isOpen && (
-              <div className="fixed inset-0 z-50 bg-blue-900 overflow-y-auto">
+              <div className="flex overflow-x-auto px-4 sm:px-6 mt-2 pb-2 w-full">
                 <ul className="flex flex-col mt-20 space-y-4 px-6">
                   {navItems.map((item, idx) => (
                     <li key={idx} className="text-white text-lg font-semibold">

@@ -110,8 +110,8 @@ export default function HomePage() {
       <Button variant="ghost" className="text-white text-sm hover:bg-white/10 px-2">
         INR
       </Button>
-      <img src="/flag1.png" alt="India Flag" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full" />
-      <img src="/mark.png" alt="Help" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full filter invert" />
+      <img src="/flag1.png" alt="India Flag" className="w-5 h-5 sm:w-7 sm:h-7 rounded-full" />
+      <img src="/mark.png" alt="Help" className="w-6 h-6 sm:w-10 sm:h-10 rounded-full filter invert" />
       <Button variant="ghost" className="hidden md:inline-block text-white text-sm hover:bg-white/10">
         List your property
       </Button>
